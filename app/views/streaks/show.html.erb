@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number of days:</strong>
+  <%= @streak.number_of_days %>
+</p>
+
+<p>
+  <strong>Lang:</strong>
+  <%= @streak.lang_id %>
+</p>
+
+<%= link_to 'Edit', edit_streak_path(@streak) %> |
+<%= link_to 'Back', streaks_path %>

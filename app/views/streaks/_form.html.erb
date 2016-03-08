@@ -1,0 +1,25 @@
+<%= form_for(@streak) do |f| %>
+  <% if @streak.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@streak.errors.count, "error") %> prohibited this streak from being saved:</h2>
+
+      <ul>
+      <% @streak.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number_of_days %><br>
+    <%= f.number_field :number_of_days %>
+  </div>
+  <div class="field">
+    <%= f.label :lang_id %><br>
+    <%= f.number_field :lang_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
